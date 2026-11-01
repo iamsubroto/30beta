@@ -802,3 +802,62 @@ html{scroll-behavior:smooth}
 .css-5c28k8.builder-block{font-size:12.8px;line-height:1.6;color:#8B929A;margin-top:6px;}
 
 .css-zxwsfk.builder-block{height:0;width:0;display:block;opacity:0;overflow:hidden;pointer-events:none;}
+/* Fix: Ensure proof testimonial card text containers wrap and stay strictly within borders */
+.sj-proof .css-spg8mr.builder-block,
+.sj-proof .css-sb6l3x.builder-block {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.sj-proof .css-q2qocb.builder-block {
+  -webkit-flex: 1 1 0% !important;
+  -ms-flex: 1 1 0% !important;
+  flex: 1 1 0% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+.sj-proof .css-q2qocb.builder-block .builder-text {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.sj-proof .css-q2qocb.builder-block p {
+  word-break: normal;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Fix: Ensure 'Botánicos naturales' card text stays strictly within borders */
+.css-11qehzg.builder-block {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.css-1s8wi70.builder-block {
+  -webkit-flex: 1 1 0% !important;
+  -ms-flex: 1 1 0% !important;
+  flex: 1 1 0% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+.css-1s8wi70.builder-block .builder-text {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.css-1s8wi70.builder-block p {
+  word-break: normal;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+@media only screen and (max-width: 640px) {
+  .css-1s8wi70.builder-block {
+    -webkit-flex: 0 0 auto !important;
+    -ms-flex: 0 0 auto !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+  }
+}

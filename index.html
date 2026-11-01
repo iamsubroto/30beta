@@ -46,5 +46,29 @@
     </div>
   </main>
   <script src="script.js"></script>
+
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+  var el = document.querySelector('.builder-6f5d765b877345e3aa80e93cd1450b14');
+  if (!el) { console.log('DEBUG: NOT FOUND'); return; }
+  var r = el.getBoundingClientRect();
+  console.log('DEBUG: PROOF_BOX: top=' + r.top + ' bottom=' + r.bottom + ' h=' + r.height + ' w=' + r.width);
+  Array.prototype.forEach.call(el.children, function(c, i){
+    var cr = c.getBoundingClientRect();
+    var p = c.querySelector('p');
+    var pr = p ? p.getBoundingClientRect() : null;
+    console.log('DEBUG: CARD_' + i + ': top=' + cr.top + ' bottom=' + cr.bottom + ' h=' + cr.height + ' w=' + cr.width);
+    if (pr) {
+      console.log('DEBUG: P_' + i + ': top=' + pr.top + ' bottom=' + pr.bottom + ' h=' + pr.height + ' w=' + pr.width);
+      if (pr.bottom > cr.bottom) {
+        console.log('DEBUG: OVERFLOW_DETECTED in card ' + i + '! Text bottom (' + pr.bottom + ') > card bottom (' + cr.bottom + ')');
+      }
+      if (pr.right > cr.right) {
+        console.log('DEBUG: OVERFLOW_HORIZONTAL in card ' + i + '! Text right (' + pr.right + ') > card right (' + cr.right + ')');
+      }
+    }
+  });
+});
+</script>
 </body>
 </html>
