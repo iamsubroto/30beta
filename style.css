@@ -861,3 +861,30 @@ html{scroll-behavior:smooth}
     width: 100% !important;
   }
 }
+
+/* Fix: Mobile vertical layout for proof cards (She+ ya está aquí section) */
+@media only screen and (max-width: 991px) {
+  .sj-proof.css-1e4tcuw.builder-block,
+  .sj-proof {
+    -webkit-flex-direction: column !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    overflow-x: visible !important;
+    gap: 12px !important;
+    width: 100% !important;
+    scroll-snap-type: none !important;
+  }
+
+  .sj-proof .css-spg8mr.builder-block,
+  .sj-proof .css-sb6l3x.builder-block {
+    -webkit-flex: none !important;
+    -ms-flex: none !important;
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: 1px solid #E3E5E8 !important;
+    border-radius: 12px !important;
+    padding: 12px 14px !important;
+    scroll-snap-align: none !important;
+  }
+}

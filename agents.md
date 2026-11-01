@@ -21,14 +21,13 @@ Pixel-accurate standalone replication of the main content from:
    - Mobile interactive conversation bubble thread (`#convoThread`).
    - SVG interactive clinical trial chart (`#sjbChart`).
    - 8-creator testimonial video carousel with poster mapping and Vimeo embed (`.sjv`).
-3. **Card Border Overflow Fixes (`flex-shrink: 0` overrides):**
-   - Proof testimonial cards (`.sj-proof .css-q2qocb`): constrained with `flex: 1 1 0% !important; min-width: 0 !important;`.
+3. **Card Border & Layout Fixes:**
+   - Hero proof cards (`.sj-proof`): 3 columns horizontally on desktop; stacked **vertically** on mobile/tablet (`<=991px`) so all 3 boxes are fully visible with 0 cropping.
    - "Botánicos naturales" card (`.sj-rv1 .css-1s8wi70`): constrained with responsive flex wrapping.
-   - Verified across viewports: 1920px, 1440px, 991px, 768px, 430px, 390px (0 border overflows).
+   - Verified across viewports: 1920px, 1440px, 991px, 768px, 430px, 390px.
 
 ## How to Run & Verify
 - **Local Server:** `python -m http.server 8080` -> open `http://localhost:8080/index.html`
 - **CDP Verification Tools:**
-  - `python tools/test_file.py`: Measures `.sj-proof` boundaries across viewports.
-  - `python tools/measure_rv1.py`: Measures `.sj-rv1` botanical card boundaries.
+  - `python tools/test_vertical_proof.py`: Verifies horizontal desktop and vertical mobile layouts.
   - Screenshots in [verification_screenshots/](file:///C:/bakcup/30beta/verification_screenshots/).
