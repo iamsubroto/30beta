@@ -26,8 +26,3 @@ Pixel-accurate standalone replication of the main content from:
    - "Botánicos naturales" card (`.sj-rv1 .css-1s8wi70`): constrained with responsive flex wrapping.
    - Verified across viewports: 1920px, 1440px, 991px, 768px, 430px, 390px.
 
-## How to Run & Verify
-- **Local Server:** `python -m http.server 8080` -> open `http://localhost:8080/index.html`
-- **CDP Verification Tools:**
-  - `python tools/test_vertical_proof.py`: Verifies horizontal desktop and vertical mobile layouts.
-  - Screenshots in [verification_screenshots/](file:///C:/bakcup/30beta/verification_screenshots/).
