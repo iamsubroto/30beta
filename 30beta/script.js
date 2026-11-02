@@ -137,23 +137,33 @@ var VSL = [
 ];
 (function(){
   var VIMEO = "https://player.vimeo.com/video/";
+  var VIMEO_THUMB = {
+    "1240003820": "https://i.vimeocdn.com/video/2217704383-32f73ce95aa00c183717bf3dc8d2daa9cf83bfc14d1c7e0e07388fa5bbc875c7-d_960?region=us",
+    "1240003796": "https://i.vimeocdn.com/video/2217704392-9628e51f1dd585eb987947e6a417464d7737948711f57f0b6079fa00952a4221-d_960?region=us",
+    "1240003832": "https://i.vimeocdn.com/video/2217704403-4d9f19bb63f13678dcad181a5d7c3ab4f9b7c84fd808e6ba8e9926b8f14bf309-d_960?region=us",
+    "1240003813": "https://i.vimeocdn.com/video/2217704386-a9d2b74ebc6f249175952e898dfac222eb0edace39ded4cbcb5ad837bae66ae5-d_960?region=us",
+    "1240003789": "https://i.vimeocdn.com/video/2217704370-4d77772ae88edc4dd2c6deefadf0712bbbfe8aa240b35d1902969e419c854e91-d_960?region=us",
+    "1240003831": "https://i.vimeocdn.com/video/2217704401-8a0912fa60641b87d01c91e01d148a62029291912c3bac65c4f78f4df61d705d-d_960?region=us",
+    "1240003798": "https://i.vimeocdn.com/video/2217704367-0081dd04c7926965b0a5f4166b40eb04970c10143b57455c393d05b36570ac5a-d_960?region=us",
+    "1240003791": "https://i.vimeocdn.com/video/2217704363-ac4e9b907fcd1a958c1eb969d08301ce9d4b267f275bc1c25643b3803140438c-d_960?region=us"
+  };
   var POSTER_MAP = {
-    "d8b90bceb6464755b0b477f0f91b4580": "./assets/images/d8b90bceb6464755b0b477f0f91b4580.png",
-    "3a52181f6ca245c69f9a56d19be682c6": "./assets/images/3a52181f6ca245c69f9a56d19be682c6.webp",
-    "4f2e697f49cd4180a01f29d263226507": "./assets/images/4f2e697f49cd4180a01f29d263226507.png",
-    "e3f918189fea40b48e61cac195399cbc": "./assets/images/e3f918189fea40b48e61cac195399cbc.webp",
-    "7b9aecfcc1ee41218be95c269f5fe8c9": "./assets/images/7b9aecfcc1ee41218be95c269f5fe8c9.png",
-    "e16a970adf0e4440ba3ee2d51b0be9d1": "./assets/images/e16a970adf0e4440ba3ee2d51b0be9d1.png",
-    "88531704c2a54eadbd7946f3db315b16": "./assets/images/88531704c2a54eadbd7946f3db315b16.png",
-    "6807dd0f90e64b5db594d9b7baec715c": "./assets/images/6807dd0f90e64b5db594d9b7baec715c.webp"
+    "d8b90bceb6464755b0b477f0f91b4580": "./assets/images/vsl-katie-w.jpg",
+    "3a52181f6ca245c69f9a56d19be682c6": "./assets/images/vsl-andre-p.jpg",
+    "4f2e697f49cd4180a01f29d263226507": "./assets/images/vsl-brooke-t.jpg",
+    "e3f918189fea40b48e61cac195399cbc": "./assets/images/vsl-chris-r.jpg",
+    "7b9aecfcc1ee41218be95c269f5fe8c9": "./assets/images/vsl-denise-w.jpg",
+    "e16a970adf0e4440ba3ee2d51b0be9d1": "./assets/images/vsl-briana-m.jpg",
+    "88531704c2a54eadbd7946f3db315b16": "./assets/images/vsl-zamara-s.jpg",
+    "6807dd0f90e64b5db594d9b7baec715c": "./assets/images/vsl-judy-s.jpg"
   };
   function esc(t){ var A = String.fromCharCode(38); return String(t).replace(/[&<>"]/g, function(c){ return A + ({"&":"amp","<":"lt",">":"gt","\"":"quot"})[c] + ";"; }); }
   function card(v){
     var src = VIMEO + v.vimeo + "?h=" + v.h + "&autoplay=1&title=0&byline=0&portrait=0&dnt=1";
     var cap = v.name ? "<figcaption><b>" + esc(v.name) + "</b>" + (v.line ? "<span>" + esc(v.line) + "<sup>**</sup></span>" : "") + "</figcaption>" : "";
     var posterUrl = v.poster ? (POSTER_MAP[v.poster] || ("./assets/images/" + v.poster + ".webp")) : "";
-    var img = posterUrl ? "<img src=\"" + esc(posterUrl) + "\" alt=\"\" decoding=\"async\" loading=\"lazy\">" : "";
-    return "<figure class=\"vsl-card\"><div class=\"vsl-thumb\" data-src=\"" + esc(src) + "\">" + img + "<button class=\"vsl-play\" type=\"button\" aria-label=\"Reproducir " + esc(v.name || "video") + "\"></button></div>" + cap + "</figure>";
+    var img = posterUrl ? '<img src="' + esc(posterUrl) + '" alt="' + esc(v.name || "") + '" decoding="async" loading="lazy">' : '';
+    return '<figure class="vsl-card"><div class="vsl-thumb" data-src="' + esc(src) + '">' + img + '<button class="vsl-play" type="button" aria-label="Reproducir ' + esc(v.name || "video") + '"></button></div>' + cap + '</figure>';
   }
   /* A poster and a button, not a player: the Vimeo iframe is created on click, one at a time. */
   function openVideo(thumb){
@@ -170,7 +180,9 @@ var VSL = [
   Array.prototype.forEach.call(document.querySelectorAll(".sjv"), function(slider){
     if (slider.getAttribute("data-ready")) return; slider.setAttribute("data-ready", "1");
     var track = slider.querySelector(".vsl-track"); if (!track) return;
-    track.innerHTML = VSL.filter(function(v){ return v && v.vimeo; }).map(card).join("");
+    if (!track.children.length) {
+      track.innerHTML = VSL.filter(function(v){ return v && v.vimeo; }).map(card).join("");
+    }
     track.addEventListener("click", function(e){
       var t = e.target.closest ? e.target.closest(".vsl-play") : null;
       if (t) openVideo(t.parentNode);

@@ -1,28 +1,136 @@
-# Project Context: She+ Landing Page Replication
+# Project Memory: She+ Landing Page (HTML to PHP Conversion - 30beta)
 
-## Objective
-Pixel-accurate standalone replication of the main content from:
-`https://www.immunotec.com/es-US/momentum/page/she-join`
-(Strictly main content only: excludes site header, navigation bar, footer, and cookies banner).
+> Project instructions and context for AI coding assistants. Read this before starting any work in a new session.
 
-## Tech Stack & Architecture
-- **HTML:** [index.html](file:///C:/bakcup/30beta/index.html) — Semantic Builder.io AST layout.
-- **CSS:** [style.css](file:///C:/bakcup/30beta/style.css) — Emotion CSS rules + responsive breakpoints (`991px`, `640px`).
-- **JavaScript:** [script.js](file:///C:/bakcup/30beta/script.js) — Vanilla JS (marquee, conversation thread, SVG chart, video slider, lead form).
-- **Assets:** [assets/](file:///C:/bakcup/30beta/assets/)
-  - `fonts/`: 3 Akzidenz-Grotesk BQ font files (`woff2`).
-  - `images/`: 63 local images & icons (0 external 404 dependencies).
+---
 
-## Completed Work & Critical Fixes
-1. **Full Page Extracted & Built:** Complete layout from Hero down to *Fuentes* references.
-2. **Interactive Features:**
-   - Smooth anchor scrolling (`#why`, `#packages`).
-   - Infinite marquee ticker (`.sj-marq`).
-   - Mobile interactive conversation bubble thread (`#convoThread`).
-   - SVG interactive clinical trial chart (`#sjbChart`).
-   - 8-creator testimonial video carousel with poster mapping and Vimeo embed (`.sjv`).
-3. **Card Border & Layout Fixes:**
-   - Hero proof cards (`.sj-proof`): 3 columns horizontally on desktop; stacked **vertically** on mobile/tablet (`<=991px`) so all 3 boxes are fully visible with 0 cropping.
-   - "Botánicos naturales" card (`.sj-rv1 .css-1s8wi70`): constrained with responsive flex wrapping.
-   - Verified across viewports: 1920px, 1440px, 991px, 768px, 430px, 390px.
+## 📌 Project Overview
 
+| Field | Value |
+|---|---|
+| **Project Name** | `sheplus-landing-php` (She+ Landing Page - 30beta) |
+| **Current Task** | Converting static `index.html` into dynamic PHP format (`index_beta.php`) |
+| **Target Directory** | `30beta/` (All work, additions, edits, and deletions happen exclusively here) |
+| **Reference Directory** | `29beta/` (Read-only reference for PHP coding structure - **DO NOT MODIFY**) |
+| **Template ID** | `$template = 195;` (Sequential: 27beta=192, 28beta=193, 29beta=194, 30beta=195) |
+| **Language** | Spanish (`es-US` / `es`) |
+
+---
+
+## 🚨 Critical Rules & Scope Restrictions
+
+1. **Strict Target Directory Boundary**:
+   - All additions, edits, and deletions MUST be made exclusively inside the `30beta/` folder.
+   - Do NOT modify `29beta/` or any other sibling directories (`07-Aug`, `22-Sep`, `23-Aug`, `27-june`). `29beta/` is strictly for reference.
+2. **Frozen Root `index.html` (DO NOT MODIFY)**:
+   - Do **NOT** edit, modify, touch, or work on `index.html` under any circumstances. Keep it exactly as it is.
+   - `index.html` is permanently frozen as the design source of truth and replication benchmark. All ongoing work is strictly in `30beta/`.
+3. **Zero Design, HTML, CSS, or JS Modification**:
+   - Do NOT change any layout, design, HTML structure, CSS styling, or JavaScript behavior from `index.html`.
+   - The page must remain 100% pixel-accurate to the original standalone replication.
+4. **No Plain HTML File in 30beta**:
+   - Do **NOT** create a plain `index.html` inside `30beta/` (unlike `29beta`, `30beta` only uses PHP format).
+5. **Standalone Self-Sufficiency**:
+   - `30beta/` must contain all required assets (`assets/fonts`, `assets/icons`, `assets/images`), `style.css`, and `script.js` so it functions autonomously without missing dependencies.
+
+---
+
+## 🏗️ Architecture & Target Files in `30beta/`
+
+```
+30beta/
+├── index_beta.php        # Primary dynamic PHP landing page
+├── style.css             # Standalone stylesheet (synced with root style.css)
+├── script.js             # Standalone JavaScript (synced with root script.js)
+└── assets/               # Complete local static assets
+    ├── fonts/            # Akzidenz-Grotesk BQ woff2 fonts
+    ├── icons/            # SVG icons (favicon.svg)
+    └── images/           # Local WebP / PNG images (0 external 404s)
+```
+
+---
+
+## ⚙️ PHP Dynamic Integration Specifications
+
+Follow the exact coding pattern from `29beta/index_beta.php`:
+
+### 1. PHP Header Block (Line 1 of `index_beta.php`)
+```php
+<?php 
+header('Content-Type: text/html; charset=UTF-8');
+
+function to_utf8($str) {
+    if ($str === null || $str === '') return '';
+    if (function_exists('mb_check_encoding') && mb_check_encoding($str, 'UTF-8')) {
+        return $str;
+    }
+    if (function_exists('mb_convert_encoding')) {
+        return mb_convert_encoding($str, 'UTF-8', 'Windows-1252');
+    }
+    if (function_exists('iconv')) {
+        return iconv('Windows-1252', 'UTF-8//IGNORE', $str);
+    }
+    return utf8_encode($str);
+}
+
+// Allow from any origin
+if (isset($_SERVER['HTTP_ORIGIN'])) {
+    header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+    header('Access-Control-Allow-Credentials: true');
+    header('Access-Control-Max-Age: 86400');    // cache for 1 day
+}
+
+// Access-Control headers are received during OPTIONS requests
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
+        header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+
+    exit(0);
+}
+
+if (isset($_GET['mode']) && $_GET['mode'] === 'edit') {
+    $subdominio = $_GET['subdominio'] ?? '';
+
+    header("Location: https://vioniko.com/landingpage/3beta/index_beta.php?subdominio=" . urlencode($subdominio) . "&mode=edit");
+    exit;
+}
+
+$template = 195;
+include_once('../../subdominio_ini.php');
+$userIdBySubdomain = $rowUSU["clave"] ?? '';
+$video = !empty($video) ? $video : 'https://chatvk.s3.us-west-2.amazonaws.com/General_Horizontalv1.mp4';
+?>
+```
+
+### 2. Campaign Tracking Inputs (Immediately following `<body>`)
+```html
+  <!-- Hidden Campaign Tracking Inputs -->
+  <input type="hidden" id="pais" name="pais" value="<?= htmlspecialchars($pais ?? '') ?>">
+  <input type="hidden" id="ciudad" name="ciudad" value="<?= htmlspecialchars($ciudad ?? '') ?>">
+  <input type="hidden" id="estado" name="estado" value="<?= htmlspecialchars($estado ?? '') ?>">
+  <input type="hidden" id="usuario" name="usuario" value="<?= htmlspecialchars($userIdBySubdomain ?? '') ?>">
+  <input type="hidden" id="template" name="template" value="<?= htmlspecialchars($template ?? 195) ?>">
+  <input type="hidden" id="idioma" name="idioma" value="es">
+```
+
+### 3. Lead Form Hidden Fields (Inside `.sj-gform` instances before `</form>`)
+```html
+  <input type="hidden" name="pais" id="pais" value="<?php echo to_utf8($geo["geoplugin_countryName"] ?? ''); ?>">
+  <input type="hidden" name="ciudad" id="ciudad" value="<?php echo to_utf8($geo["geoplugin_city"] ?? ''); ?>">
+  <input type="hidden" name="estado" id="estado" value="<?php echo to_utf8($geo["geoplugin_regionName"] ?? ''); ?>">
+  <?php include('../campana_user.php'); ?>
+  <input type="hidden" name="usuario" id="usuario" value="<?= htmlspecialchars($userIdBySubdomain ?? ''); ?>">
+  <input type="hidden" name="template" id="template" value="<?= htmlspecialchars($template ?? 195); ?>">
+  <input type="hidden" name="idioma" id="idioma" value="es">
+```
+
+---
+
+## 📋 New Session Startup Checklist
+
+When starting a new session:
+1. **Verify Target Scope**: Inspect `30beta/` directory. Ensure no modifications leak to `29beta/`, `index.html`, or other root files.
+2. **Keep `index.html` Untouched**: Confirm root `index.html` remains unmodified and frozen as the baseline.
+3. **Verify PHP Integrity**: Check `30beta/index_beta.php` for correct template ID (`195`), required includes (`subdominio_ini.php`, `campana_user.php`), and encoding.
+4. **Check Assets**: Ensure all font and image references (`./assets/...`) resolve without 404s within `30beta/assets/`.
+5. **Preserve Markup**: When making updates, never modify existing CSS rules, JavaScript handlers, or HTML layout structures.
