@@ -40,7 +40,7 @@ if (isset($_GET['mode']) && $_GET['mode'] === 'edit') {
 $template = 195;
 include_once('../../subdominio_ini.php');
 $userIdBySubdomain = $rowUSU["clave"] ?? '';
-$video = !empty($video) ? $video : 'https://chatvk.s3.us-west-2.amazonaws.com/General_Horizontalv1.mp4';
+$video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/videos/sheplusintrooptimized.mp4';
 ?>
 <!DOCTYPE html>
 <html lang="es-US">
@@ -69,6 +69,28 @@ $video = !empty($video) ? $video : 'https://chatvk.s3.us-west-2.amazonaws.com/Ge
     <div class="builder-content" data-builder-content-id="2f98e06acd2c486697712d602aad4f66">
       <div class="builder-blocks" data-builder-blocks="true">
         <div builder-id="builder-84c6b191dfe94c618a07bf1bd1cd29da" class="builder-block builder-84c6b191dfe94c618a07bf1bd1cd29da sj-page css-yn0zrg">
+          <!-- Top Video Section Dynamic with PHP (Non-downloadable) -->
+          <section id="top-video-section" class="top-video-section" aria-label="Video de Introducción">
+            <div class="top-video-container">
+              <div class="top-video-wrapper" oncontextmenu="return false;">
+                <video
+                  id="top-main-video"
+                  class="top-main-video"
+                  controls
+                  controlsList="nodownload noplaybackrate"
+                  disablePictureInPicture
+                  disableRemotePlayback
+                  playsinline
+                  webkit-playsinline
+                  oncontextmenu="return false;"
+                  ondragstart="return false;"
+                  preload="metadata">
+                  <source src="<?= htmlspecialchars($video); ?>" type="video/mp4">
+                  Tu navegador no soporta el elemento de video.
+                </video>
+              </div>
+            </div>
+          </section>
           <div builder-id="builder-deb41953516c42e8bd48970f018fe1c6" class="builder-block builder-deb41953516c42e8bd48970f018fe1c6 css-2ks0li">
             <div builder-id="builder-8592a60cc1784879af98c5382b8d8619" class="builder-block builder-8592a60cc1784879af98c5382b8d8619 css-3jkp5u">
               <div builder-id="builder-21244f423d0b46e2b1f4f2303df79b57" class="builder-block builder-21244f423d0b46e2b1f4f2303df79b57 css-h58jhz">

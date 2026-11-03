@@ -888,3 +888,97 @@ html{scroll-behavior:smooth}
     scroll-snap-align: none !important;
   }
 }
+
+/* ==========================================================================
+   Top Dynamic Video Section (Intro Video - Non-Downloadable)
+   ========================================================================== */
+.top-video-section {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 32px 24px 16px 24px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.top-video-container {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.top-video-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #000000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(126, 26, 34, 0.08);
+  aspect-ratio: 16 / 9;
+  line-height: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.top-main-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+  background-color: #000000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Anti-Download Protections for Video Players */
+video::-internal-media-controls-download-button,
+video::-webkit-media-controls-download-button {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+  overflow: hidden !important;
+}
+
+@media only screen and (max-width: 991px) {
+  .top-video-section {
+    padding: 24px 18px 12px 18px;
+  }
+
+  .top-video-wrapper,
+  .top-main-video {
+    border-radius: 12px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .top-video-section {
+    padding: 16px 14px 8px 14px;
+  }
+
+  .top-video-wrapper,
+  .top-main-video {
+    border-radius: 10px;
+  }
+}

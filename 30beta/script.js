@@ -274,3 +274,53 @@ var VSL = [
   /* a link that arrives with #packages lands on the packages */
   if (location.hash === "#packages") setTimeout(function(){ var t = document.querySelector(".sj-packages"); if (t) t.scrollIntoView({ block:"start" }); }, 900);
 })();
+
+
+/* ==========================================================================
+   Anti-Download Protection for Top Intro Video
+   ========================================================================== */
+(function() {
+  function initVideoProtection() {
+    var video = document.getElementById("top-main-video");
+    var wrapper = document.querySelector(".top-video-wrapper");
+    if (!video) return;
+
+    function blockEvent(e) {
+      if (e.preventDefault) e.preventDefault();
+      if (e.stopPropagation) e.stopPropagation();
+      e.returnValue = false;
+      return false;
+    }
+
+    // Disable context menu on video & wrapper
+    video.addEventListener("contextmenu", blockEvent);
+    if (wrapper) {
+      wrapper.addEventListener("contextmenu", blockEvent);
+      wrapper.addEventListener("dragstart", blockEvent);
+    }
+    video.addEventListener("dragstart", blockEvent);
+
+    // Disable save keyboard shortcuts (Ctrl+S, Cmd+S, Ctrl+U)
+    video.addEventListener("keydown", function(e) {
+      if ((e.ctrlKey || e.metaKey) && (e.key === "s" || e.key === "S" || e.key === "u" || e.key === "U")) {
+        blockEvent(e);
+      }
+    });
+
+    // Programmatically enforce nodownload and disable PiP
+    try {
+      if (video.controlsList) {
+        video.controlsList.add("nodownload");
+        video.controlsList.add("noplaybackrate");
+      }
+      video.disablePictureInPicture = true;
+      video.disableRemotePlayback = true;
+    } catch(err) {}
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initVideoProtection);
+  } else {
+    initVideoProtection();
+  }
+})();
