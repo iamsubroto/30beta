@@ -22,15 +22,7 @@
 1. **Strict Target Directory Boundary**:
    - All additions, edits, and deletions MUST be made exclusively inside the `30beta/` folder.
    - Do NOT modify `29beta/` or any other sibling directories (`07-Aug`, `22-Sep`, `23-Aug`, `27-june`). `29beta/` is strictly for reference.
-2. **Frozen Root `index.html` (DO NOT MODIFY)**:
-   - Do **NOT** edit, modify, touch, or work on `index.html` under any circumstances. Keep it exactly as it is.
-   - `index.html` is permanently frozen as the design source of truth and replication benchmark. All ongoing work is strictly in `30beta/`.
-3. **Zero Design, HTML, CSS, or JS Modification**:
-   - Do NOT change any layout, design, HTML structure, CSS styling, or JavaScript behavior from `index.html`.
-   - The page must remain 100% pixel-accurate to the original standalone replication.
-4. **No Plain HTML File in 30beta**:
-   - Do **NOT** create a plain `index.html` inside `30beta/` (unlike `29beta`, `30beta` only uses PHP format).
-5. **Standalone Self-Sufficiency**:
+2. **Standalone Self-Sufficiency**:
    - `30beta/` must contain all required assets (`assets/fonts`, `assets/icons`, `assets/images`), `style.css`, and `script.js` so it functions autonomously without missing dependencies.
 
 ---
