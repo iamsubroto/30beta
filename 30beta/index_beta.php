@@ -54,7 +54,7 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
   <link rel="preload" href="./assets/fonts/a78f026cb920db78-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./assets/fonts/10e68fcded945cbf-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=1.0.5">
 </head>
 
 <body>
@@ -69,6 +69,13 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
     <div class="builder-content" data-builder-content-id="2f98e06acd2c486697712d602aad4f66">
       <div class="builder-blocks" data-builder-blocks="true">
         <div builder-id="builder-84c6b191dfe94c618a07bf1bd1cd29da" class="builder-block builder-84c6b191dfe94c618a07bf1bd1cd29da sj-page css-yn0zrg">
+          <div builder-id="builder-adfae36cce314d56a9d79b600f94c4e5" class="builder-block builder-adfae36cce314d56a9d79b600f94c4e5 builder-has-component css-s3q4wc">
+            <div class="builder-custom-code">
+              <div aria-hidden="true" class="sj-marq">
+                <div class="sj-marq-in"><b>Primero en su tipo</b><b>Sabor manzana y arándano</b><b>Cero azúcar añadida</b><b>Vegano</b><b>Certificado por Clean Label Project</b><b>Ciencia coreana</b><b>Sin pastillas, sin agua</b><b>Detiene el scroll en redes</b> <b>Primero en su tipo</b><b>Sabor manzana y arándano</b><b>Cero azúcar añadida</b><b>Vegano</b><b>Certificado por Clean Label Project</b><b>Ciencia coreana</b><b>Sin pastillas, sin agua</b><b>Detiene el scroll en redes</b></div>
+              </div>
+            </div>
+          </div>
           <!-- Top Video Section Dynamic with PHP (Non-downloadable) -->
           <section id="top-video-section" class="top-video-section" aria-label="Video de Introducción">
             <div class="top-video-container">
@@ -102,7 +109,7 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
                       <h1>La perimenopausia acaba de volverse… <span class="sj-hi" style="background:linear-gradient(100deg,#D4232B 0%,#7E1A22 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em;">¿rentable?</span></h1>
                     </span></div>
                   <div builder-id="builder-11fa5199a4a246a7bb5866aa342cae67" class="builder-block builder-11fa5199a4a246a7bb5866aa342cae67 builder-has-component css-q3kzvl"><span class="builder-text css-1qggkls">
-                      <p><em>y ahora es mucho más fácil.</em> <a href="#buy-sheplus" style="font-size:15px;color:#7E1A22;text-decoration:none;border-bottom:1px solid #EBCBC8;white-space:nowrap;margin-left:6px;font-style:italic;letter-spacing:0">(compruébalo tú misma)</a></p>
+                      <p><em>y ahora es mucho más fácil.</em> <a href="#descarga-gratis" style="font-size:15px;color:#7E1A22;text-decoration:none;border-bottom:1px solid #EBCBC8;white-space:nowrap;margin-left:6px;font-style:italic;letter-spacing:0">(compruébalo tú misma)</a></p>
                     </span></div>
                   <div builder-id="builder-05090b5ec3ab400ead378d36317aeb57" class="builder-block builder-05090b5ec3ab400ead378d36317aeb57 sj-soft css-mpujf5">
                     <div builder-id="builder-ac7ded6e8b9e446fa8a879be0736f3f4" class="builder-block builder-ac7ded6e8b9e446fa8a879be0736f3f4 css-1a0quah">
@@ -337,7 +344,7 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
               </div>
             </div>
           </div>
-          <div builder-id="builder-17f3bcc700e74ca0a77df654ac7c26a7" class="builder-block builder-17f3bcc700e74ca0a77df654ac7c26a7 css-10sereg">
+          <div id="descarga-gratis" builder-id="builder-17f3bcc700e74ca0a77df654ac7c26a7" class="builder-block builder-17f3bcc700e74ca0a77df654ac7c26a7 css-10sereg">
             <div builder-id="builder-f10031a28c1b4763b06867b05a6fb754" class="builder-block builder-f10031a28c1b4763b06867b05a6fb754 css-1oc696k">
               <div builder-id="builder-d65ebff5ffc3405e8e3aff74c4b29409" class="builder-block builder-d65ebff5ffc3405e8e3aff74c4b29409 css-1rnc9nf">
                 <div builder-id="builder-c81b53303728475297da9b45bee4bd2d" class="builder-block builder-c81b53303728475297da9b45bee4bd2d css-y4x0g1">
@@ -350,25 +357,43 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
                 </div>
                 <div builder-id="builder-c3f85d59b79a4ff6a2ab0e62b5eb87fb" class="builder-block builder-c3f85d59b79a4ff6a2ab0e62b5eb87fb css-1ykbyde">
                   <div builder-id="builder-1485e5b90c694c74b7ce8c78baab965a" class="builder-block builder-1485e5b90c694c74b7ce8c78baab965a builder-has-component css-hnshro"><span class="builder-text css-1qggkls">
-                      <p>Descarga gratis · 42 páginas</p>
+                      <p>DESCARGA GRATIS · 42 PÁGINAS</p>
                     </span></div>
                   <div builder-id="builder-76a2e4fe76a14cb99a67463b13b59d67" class="builder-block builder-76a2e4fe76a14cb99a67463b13b59d67 builder-has-component css-1a3izum"><span class="builder-text css-1qggkls">
-                      <h3>La perimenopausia es complicada. <span style="background:linear-gradient(100deg,#D4232B 0%,#7E1A22 100%);-webkit-background-clip:text;background-clip:text;color:transparent;">Por eso hicimos una guía gratis de 42 páginas.</span></h3>
+                      <h3>La perimenopausia es complicada. <span class="guide-title-red">Por eso hicimos una guía gratis de 42 páginas.</span></h3>
                     </span></div>
                   <div builder-id="builder-a2db603d2f264c74aa4d48bb9d339a09" class="builder-block builder-a2db603d2f264c74aa4d48bb9d339a09 builder-has-component css-9n8y55"><span class="builder-text css-1qggkls">
-                      <ul style="list-style:none;padding:0;margin:0">
-                        <li style="display:flex;gap:10px;align-items:flex-start;padding:4px 0"><span style="color:#D4232B;font-weight:500">✓</span><span>Espera, ¿estoy en la perimenopausia? Cómo saberlo</span></li>
-                        <li style="display:flex;gap:10px;align-items:flex-start;padding:4px 0"><span style="color:#D4232B;font-weight:500">✓</span><span>Por qué tienes calor, cansancio y niebla mental, en palabras simples</span></li>
-                        <li style="display:flex;gap:10px;align-items:flex-start;padding:4px 0"><span style="color:#D4232B;font-weight:500">✓</span><span>La pancita que apareció de la noche a la mañana, y qué ayuda</span></li>
-                        <li style="display:flex;gap:10px;align-items:flex-start;padding:4px 0"><span style="color:#D4232B;font-weight:500">✓</span><span>Sexo y libido: qué cambió y qué hacer al respecto</span></li>
+                      <ul class="guide-checklist">
+                        <li><span class="guide-chk">✓</span><span>Espera, ¿estoy en la perimenopausia? Cómo saberlo</span></li>
+                        <li><span class="guide-chk">✓</span><span>Por qué tienes calor, cansancio y niebla mental, en palabras simples</span></li>
+                        <li><span class="guide-chk">✓</span><span>La pancita que apareció de la noche a la mañana, y qué ayuda</span></li>
+                        <li><span class="guide-chk">✓</span><span>Sexo y libido: qué cambió y qué hacer al respecto</span></li>
                       </ul>
                     </span></div>
+                  <div class="guide-bonus-box">
+                    <div class="guide-bonus-icon-col">
+                      <svg class="guide-bonus-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3" y="8" width="18" height="4" rx="1"/>
+                        <path d="M12 8v13"/>
+                        <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/>
+                        <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>
+                      </svg>
+                      <div class="guide-bonus-divider"></div>
+                    </div>
+                    <p class="guide-bonus-text">Además, al registrarte, accedes <strong class="red-accent">gratis</strong> e <strong class="red-accent">inmediatamente</strong> a una conferencia exclusiva del científico Palafox, donde explica los componentes y la ciencia detrás de lo que hace tan especial este producto.</p>
+                  </div>
                   <div builder-id="builder-075e98a448d446b2b862f5370ece8fa2" class="builder-block builder-075e98a448d446b2b862f5370ece8fa2 builder-has-component css-s3q4wc">
                     <div class="builder-custom-code">
                       <div class="sj-glead">
                         <form class="sj-gform" data-pdf="https://cdn.builder.io/o/assets%2Ffdb4d79bfbfd478d89398007f8c29424%2Ffc5571e722e0421197e017b04c290126?alt=media&amp;token=204ddd84-f1ef-45dd-8392-c36abac237a5&amp;apiKey=fdb4d79bfbfd478d89398007f8c29424" novalidate="">
-                          <input aria-label="Correo electrónico" autocomplete="email" placeholder="tumejorcorreo@email.com" type="email" />
-                          <button type="submit">Quiero la guía gratis</button>
+                          <div class="sj-gform-row">
+                            <input aria-label="Correo electrónico" autocomplete="email" placeholder="tumejorcorreo@email.com" type="email" />
+                            <button type="submit">
+                              <span class="btn-line-1">Quiero mi guía +</span>
+                              <span class="btn-line-2">conferencia gratis</span>
+                            </button>
+                          </div>
+                          <p class="guide-subnote">Recibe de <strong>inmediato</strong> tu guía gratuita y el acceso a la conferencia en tu correo.</p>
                           <input type="hidden" name="pais" id="pais" value="<?php echo to_utf8($geo["geoplugin_countryName"] ?? ''); ?>">
                           <input type="hidden" name="ciudad" id="ciudad" value="<?php echo to_utf8($geo["geoplugin_city"] ?? ''); ?>">
                           <input type="hidden" name="estado" id="estado" value="<?php echo to_utf8($geo["geoplugin_regionName"] ?? ''); ?>">
@@ -1708,7 +1733,7 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
       </div>
     </div>
   </main>
-  <script src="script.js"></script>
+  <script src="script.js?v=1.0.5"></script>
 
   <script>
     window.addEventListener('DOMContentLoaded', function() {
