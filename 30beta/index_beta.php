@@ -1004,35 +1004,35 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
                   <div class="sjv vslider"><button aria-label="Anterior" class="vsl-btn prev" type="button">‹</button>
                     <div class="vsl-track">
                       <figure class="vsl-card">
-                        <div class="vsl-thumb" data-src="https://player.vimeo.com/video/1240003820?h=0c2c34386f&amp;autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"><img src="./assets/images/vsl-katie-w.jpg" alt="Katie W" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Katie W"></button></div>
+                        <div class="vsl-thumb" data-src="https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V1_video-katie-w_b44dff6a-Spanish_(Mexico)_with_captions.mp4"><img src="./assets/images/vsl-katie-w.jpg" alt="Katie W" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Katie W"></button></div>
                         <figcaption><b>Katie W</b><span>Trabaja desde casa mientras educa a sus hijos.<sup>**</sup></span></figcaption>
                       </figure>
                       <figure class="vsl-card">
-                        <div class="vsl-thumb" data-src="https://player.vimeo.com/video/1240003796?h=e470463372&amp;autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"><img src="./assets/images/vsl-andre-p.jpg" alt="Andre P" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Andre P"></button></div>
+                        <div class="vsl-thumb" data-src="https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V2_video-andre-p_16bf3296-Spanish_(Mexico)_with_captions.mp4"><img src="./assets/images/vsl-andre-p.jpg" alt="Andre P" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Andre P"></button></div>
                         <figcaption><b>Andre P</b><span>Emprendedor en serie que viaja por el mundo.<sup>**</sup></span></figcaption>
                       </figure>
                       <figure class="vsl-card">
-                        <div class="vsl-thumb" data-src="https://player.vimeo.com/video/1240003832?h=22f72a12b4&amp;autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"><img src="./assets/images/vsl-brooke-t.jpg" alt="Brooke T" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Brooke T"></button></div>
+                        <div class="vsl-thumb" data-src="https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V3_video-brooke-t_d708ed6b-Spanish_(Mexico)_with_captions.mp4"><img src="./assets/images/vsl-brooke-t.jpg" alt="Brooke T" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Brooke T"></button></div>
                         <figcaption><b>Brooke T</b><span>Ganó seis cifras en su primer año, mientras trabajaba tiempo completo.<sup>**</sup></span></figcaption>
                       </figure>
                       <figure class="vsl-card">
-                        <div class="vsl-thumb" data-src="https://player.vimeo.com/video/1240003813?h=4f9cb7c2a6&amp;autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"><img src="./assets/images/vsl-chris-r.jpg" alt="Chris R" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Chris R"></button></div>
+                        <div class="vsl-thumb" data-src="https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V4_video-chris-r_6c572608-Spanish_(Mexico)_with_captions.mp4"><img src="./assets/images/vsl-chris-r.jpg" alt="Chris R" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Chris R"></button></div>
                         <figcaption><b>Chris R</b><span>Agricultor que usa el negocio para invertir en el campo.<sup>**</sup></span></figcaption>
                       </figure>
                       <figure class="vsl-card">
-                        <div class="vsl-thumb" data-src="https://player.vimeo.com/video/1240003789?h=0c8c2b9f4b&amp;autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"><img src="./assets/images/vsl-denise-w.jpg" alt="Denise W" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Denise W"></button></div>
+                        <div class="vsl-thumb" data-src="https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V5_video-denise-w_ee2e8a5b-Spanish_(Mexico)_with_captions.mp4"><img src="./assets/images/vsl-denise-w.jpg" alt="Denise W" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Denise W"></button></div>
                         <figcaption><b>Denise W</b><span>Psicóloga gana más de 5 cifras en su primer mes.<sup>**</sup></span></figcaption>
                       </figure>
                       <figure class="vsl-card">
-                        <div class="vsl-thumb" data-src="https://player.vimeo.com/video/1240003831?h=9d31812e82&amp;autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"><img src="./assets/images/vsl-briana-m.jpg" alt="Briana M" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Briana M"></button></div>
+                        <div class="vsl-thumb" data-src="https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V6_video-briana-m_91e0e6b8-Spanish_(Mexico)_with_captions.mp4"><img src="./assets/images/vsl-briana-m.jpg" alt="Briana M" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Briana M"></button></div>
                         <figcaption><b>Briana M</b><span>Pudo cubrir su hipoteca en los primeros 30 días.<sup>**</sup></span></figcaption>
                       </figure>
                       <figure class="vsl-card">
-                        <div class="vsl-thumb" data-src="https://player.vimeo.com/video/1240003798?h=87ebf396ce&amp;autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"><img src="./assets/images/vsl-zamara-s.jpg" alt="Zamara S" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Zamara S"></button></div>
+                        <div class="vsl-thumb" data-src="https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V7_video-zamara-s_86f83c1c-Spanish_(Mexico)_with_captions.mp4"><img src="./assets/images/vsl-zamara-s.jpg" alt="Zamara S" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Zamara S"></button></div>
                         <figcaption><b>Zamara S</b><span>Construye en su tiempo libre para darse los gustos.<sup>**</sup></span></figcaption>
                       </figure>
                       <figure class="vsl-card">
-                        <div class="vsl-thumb" data-src="https://player.vimeo.com/video/1240003791?h=d3bb9bfe15&amp;autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"><img src="./assets/images/vsl-judy-s.jpg" alt="Judy S" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Judy S"></button></div>
+                        <div class="vsl-thumb" data-src="https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V8_video-judy-s_15475d5e-Spanish_(Mexico)_with_captions.mp4"><img src="./assets/images/vsl-judy-s.jpg" alt="Judy S" decoding="async" loading="lazy"><button class="vsl-play" type="button" aria-label="Reproducir Judy S"></button></div>
                         <figcaption><b>Judy S</b><span>Dejó su empleo y logró libertad financiera.<sup>**</sup></span></figcaption>
                       </figure>
                     </div><button aria-label="Siguiente" class="vsl-btn next" type="button">›</button>

@@ -126,14 +126,14 @@ document.addEventListener('DOMContentLoaded', function () {
    (both from the share link vimeo.com/<vimeo>/<h>). poster = Builder image asset id for the
    still. name and line are the caption; every line is an income claim, so it carries **. */
 var VSL = [
-  {"vimeo": "1240003820", "h": "0c2c34386f", "name": "Katie W", "line": "Trabaja desde casa mientras educa a sus hijos.", "poster": "d8b90bceb6464755b0b477f0f91b4580"},
-  {"vimeo": "1240003796", "h": "e470463372", "name": "Andre P", "line": "Emprendedor en serie que viaja por el mundo.", "poster": "3a52181f6ca245c69f9a56d19be682c6"},
-  {"vimeo": "1240003832", "h": "22f72a12b4", "name": "Brooke T", "line": "Ganó seis cifras en su primer año, mientras trabajaba tiempo completo.", "poster": "4f2e697f49cd4180a01f29d263226507"},
-  {"vimeo": "1240003813", "h": "4f9cb7c2a6", "name": "Chris R", "line": "Agricultor que usa el negocio para invertir en el campo.", "poster": "e3f918189fea40b48e61cac195399cbc"},
-  {"vimeo": "1240003789", "h": "0c8c2b9f4b", "name": "Denise W", "line": "Psicóloga gana más de 5 cifras en su primer mes.", "poster": "7b9aecfcc1ee41218be95c269f5fe8c9"},
-  {"vimeo": "1240003831", "h": "9d31812e82", "name": "Briana M", "line": "Pudo cubrir su hipoteca en los primeros 30 días.", "poster": "e16a970adf0e4440ba3ee2d51b0be9d1"},
-  {"vimeo": "1240003798", "h": "87ebf396ce", "name": "Zamara S", "line": "Construye en su tiempo libre para darse los gustos.", "poster": "88531704c2a54eadbd7946f3db315b16"},
-  {"vimeo": "1240003791", "h": "d3bb9bfe15", "name": "Judy S", "line": "Dejó su empleo y logró libertad financiera.", "poster": "6807dd0f90e64b5db594d9b7baec715c"}
+  {"src": "https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V1_video-katie-w_b44dff6a-Spanish_(Mexico)_with_captions.mp4", "name": "Katie W", "line": "Trabaja desde casa mientras educa a sus hijos.", "poster": "d8b90bceb6464755b0b477f0f91b4580"},
+  {"src": "https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V2_video-andre-p_16bf3296-Spanish_(Mexico)_with_captions.mp4", "name": "Andre P", "line": "Emprendedor en serie que viaja por el mundo.", "poster": "3a52181f6ca245c69f9a56d19be682c6"},
+  {"src": "https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V3_video-brooke-t_d708ed6b-Spanish_(Mexico)_with_captions.mp4", "name": "Brooke T", "line": "Ganó seis cifras en su primer año, mientras trabajaba tiempo completo.", "poster": "4f2e697f49cd4180a01f29d263226507"},
+  {"src": "https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V4_video-chris-r_6c572608-Spanish_(Mexico)_with_captions.mp4", "name": "Chris R", "line": "Agricultor que usa el negocio para invertir en el campo.", "poster": "e3f918189fea40b48e61cac195399cbc"},
+  {"src": "https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V5_video-denise-w_ee2e8a5b-Spanish_(Mexico)_with_captions.mp4", "name": "Denise W", "line": "Psicóloga gana más de 5 cifras en su primer mes.", "poster": "7b9aecfcc1ee41218be95c269f5fe8c9"},
+  {"src": "https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V6_video-briana-m_91e0e6b8-Spanish_(Mexico)_with_captions.mp4", "name": "Briana M", "line": "Pudo cubrir su hipoteca en los primeros 30 días.", "poster": "e16a970adf0e4440ba3ee2d51b0be9d1"},
+  {"src": "https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V7_video-zamara-s_86f83c1c-Spanish_(Mexico)_with_captions.mp4", "name": "Zamara S", "line": "Construye en su tiempo libre para darse los gustos.", "poster": "88531704c2a54eadbd7946f3db315b16"},
+  {"src": "https://vioniko.s3.us-west-2.amazonaws.com/sheplus/V8_video-judy-s_15475d5e-Spanish_(Mexico)_with_captions.mp4", "name": "Judy S", "line": "Dejó su empleo y logró libertad financiera.", "poster": "6807dd0f90e64b5db594d9b7baec715c"}
 ];
 (function(){
   var VIMEO = "https://player.vimeo.com/video/";
@@ -159,7 +159,7 @@ var VSL = [
   };
   function esc(t){ var A = String.fromCharCode(38); return String(t).replace(/[&<>"]/g, function(c){ return A + ({"&":"amp","<":"lt",">":"gt","\"":"quot"})[c] + ";"; }); }
   function card(v){
-    var src = VIMEO + v.vimeo + "?h=" + v.h + "&autoplay=1&title=0&byline=0&portrait=0&dnt=1";
+    var src = v.src || (v.vimeo ? (VIMEO + v.vimeo + "?h=" + v.h + "&autoplay=1&title=0&byline=0&portrait=0&dnt=1") : "");
     var cap = v.name ? "<figcaption><b>" + esc(v.name) + "</b>" + (v.line ? "<span>" + esc(v.line) + "<sup>**</sup></span>" : "") + "</figcaption>" : "";
     var posterUrl = v.poster ? (POSTER_MAP[v.poster] || ("./assets/images/" + v.poster + ".webp")) : "";
     var img = posterUrl ? '<img src="' + esc(posterUrl) + '" alt="' + esc(v.name || "") + '" decoding="async" loading="lazy">' : '';
@@ -168,11 +168,32 @@ var VSL = [
   /* A poster and a button, not a player: the Vimeo iframe is created on click, one at a time. */
   function openVideo(thumb){
     var src = thumb.getAttribute("data-src");
-    if (!src || thumb.querySelector("iframe")) return;
+    if (!src || thumb.querySelector("iframe") || thumb.querySelector("video")) return;
     Array.prototype.forEach.call(document.querySelectorAll(".sjv .vsl-thumb[data-open]"), function(o){
       if (o !== thumb) { o.innerHTML = o.getAttribute("data-open"); o.removeAttribute("data-open"); }
     });
     thumb.setAttribute("data-open", thumb.innerHTML);
+    if (/\.mp4($|\?)/i.test(src)) {
+      var v = document.createElement("video");
+      v.src = src;
+      v.controls = true;
+      v.autoplay = true;
+      v.playsInline = true;
+      v.setAttribute("playsinline", "");
+      v.setAttribute("controlslist", "nodownload");
+      v.style.position = "absolute";
+      v.style.inset = "0";
+      v.style.width = "100%";
+      v.style.height = "100%";
+      v.style.objectFit = "cover";
+      v.style.border = "0";
+      v.style.display = "block";
+      v.style.background = "#000";
+      thumb.innerHTML = "";
+      thumb.appendChild(v);
+      if (v.play) { v.play().catch(function(){}); }
+      return;
+    }
     var f = document.createElement("iframe");
     f.src = src; f.allow = "autoplay; fullscreen; picture-in-picture"; f.setAttribute("allowfullscreen", ""); f.setAttribute("frameborder", "0"); f.title = "Video";
     thumb.innerHTML = ""; thumb.appendChild(f);
@@ -181,7 +202,7 @@ var VSL = [
     if (slider.getAttribute("data-ready")) return; slider.setAttribute("data-ready", "1");
     var track = slider.querySelector(".vsl-track"); if (!track) return;
     if (!track.children.length) {
-      track.innerHTML = VSL.filter(function(v){ return v && v.vimeo; }).map(card).join("");
+      track.innerHTML = VSL.filter(function(v){ return v && (v.vimeo || v.src); }).map(card).join("");
     }
     track.addEventListener("click", function(e){
       var t = e.target.closest ? e.target.closest(".vsl-play") : null;
