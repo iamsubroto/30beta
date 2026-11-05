@@ -40,6 +40,7 @@ if (isset($_GET['mode']) && $_GET['mode'] === 'edit') {
 $template = 195;
 include_once('../../subdominio_ini.php');
 $userIdBySubdomain = $rowUSU["clave"] ?? '';
+$pagina_corporativa = $rowUSU["pagina_corporativa"] ?? '#';
 $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/videos/sheplusintrooptimized.mp4';
 ?>
 <!DOCTYPE html>
@@ -54,7 +55,7 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
   <link rel="preload" href="./assets/fonts/a78f026cb920db78-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./assets/fonts/10e68fcded945cbf-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=1.0.5">
+  <link rel="stylesheet" href="style.css?v=1.0.8">
 </head>
 
 <body>
@@ -1496,7 +1497,8 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
                   <div builder-id="builder-be8e36d7b8cc4dde8f010d15d16a2ba2" class="builder-block builder-be8e36d7b8cc4dde8f010d15d16a2ba2 css-1a6hxuv"></div>
                   <div builder-id="builder-32a28028d6ca410dafa9208647cf75b7" class="builder-block builder-32a28028d6ca410dafa9208647cf75b7 builder-has-component css-1wqvklg"><span class="builder-text css-1qggkls">
                       <p>Ideal si quieres empezar hoy y crecer sobre la marcha.</p>
-                    </span></div><a builder-id="builder-9d94612584b646a9b0cbcc8c7bee4e51" class="builder-block builder-9d94612584b646a9b0cbcc8c7bee4e51 builder-has-component css-g4vuj5" href="#pack-0009712" role="button">Inicia rápido</a>
+                    </span></div>
+					<a builder-id="builder-9d94612584b646a9b0cbcc8c7bee4e51" class="builder-block builder-9d94612584b646a9b0cbcc8c7bee4e51 builder-has-component css-g4vuj5" href="<?= $pagina_corporativa?>" role="button">Inicia rápido</a>
                 </div>
               </div>
               <div builder-id="builder-da3f6d1dbdcb4bd4b102ec723f08ef10" class="builder-block builder-da3f6d1dbdcb4bd4b102ec723f08ef10 css-181s62t">
@@ -1559,7 +1561,7 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
                         </span></div>
                       <div builder-id="builder-3d0706358cea4f0e8806518a729112ff" class="builder-block builder-3d0706358cea4f0e8806518a729112ff builder-has-component css-l2w5h6"><span class="builder-text css-1qggkls">
                           <p>Veinte geles en sobre de manzana y arándano azul. Uno al día.<sup>*</sup></p>
-                        </span></div><a builder-id="builder-8ea51bf7b92e4d6993f88b67261d682b" class="builder-block builder-8ea51bf7b92e4d6993f88b67261d682b builder-has-component css-1ljny65" href="#buy-sheplus" role="button">Compra She+</a>
+                        </span></div><a builder-id="builder-8ea51bf7b92e4d6993f88b67261d682b" class="builder-block builder-8ea51bf7b92e4d6993f88b67261d682b builder-has-component css-1ljny65" href="<?= $pagina_corporativa?>" role="button">Compra She+</a>
                     </div>
                   </div>
                 </div>
@@ -1642,7 +1644,7 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
                         </span></div>
                       <div builder-id="builder-0497250abc2e45d8a05ab089b118470a" class="builder-block builder-0497250abc2e45d8a05ab089b118470a builder-has-component css-l2w5h6"><span class="builder-text css-1qggkls">
                           <p>Dos cajas de She+ y un SunRay. Cuarenta geles en sobre, uno al día, más un mes de la vitamina D que a casi todos nos falta.<sup>*</sup></p>
-                        </span></div><a builder-id="builder-afadb81d61b04778b7e146014cf97d98" class="builder-block builder-afadb81d61b04778b7e146014cf97d98 builder-has-component css-g4vuj5" href="#cart-0009713" role="button">Quiero el paquete exclusivo</a>
+                        </span></div><a builder-id="builder-afadb81d61b04778b7e146014cf97d98" class="builder-block builder-afadb81d61b04778b7e146014cf97d98 builder-has-component css-g4vuj5" href="<?= $pagina_corporativa ?>" role="button">Quiero el paquete exclusivo</a>
                     </div>
                   </div>
                 </div>
@@ -1653,44 +1655,166 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
               </div>
             </div>
           </div>
-          <div builder-id="builder-fe7eb59c5a8f44228b95ca4c05b75a15" class="builder-block builder-fe7eb59c5a8f44228b95ca4c05b75a15 css-17zabp4">
-            <div builder-id="builder-c892104869414a60a666a9d4f865266b" class="builder-block builder-c892104869414a60a666a9d4f865266b css-1jxa0cq">
-              <div builder-id="builder-88666da73bfb49b48cf9d64c003e7271" class="builder-block builder-88666da73bfb49b48cf9d64c003e7271 css-fzp91l">
-                <div builder-id="builder-b62778ca62b14191b860d05aa74a8cbb" class="builder-block builder-b62778ca62b14191b860d05aa74a8cbb css-11zab9f">
-                  <div builder-id="builder-109c1c0215874f48a4a55c50bda36ed6" class="builder-block builder-109c1c0215874f48a4a55c50bda36ed6 css-1ae6z3i">
-                    <picture>
-                      <source sizes="(max-width: 638px) 66vw,  (max-width: 998px) 41vw, 34vw" srcset="./assets/images/4b5665a3e61b41f5806539698a0e5986.png" type="image/webp" /><img alt="Libro digital Guía de supervivencia para la menopausia, portada y páginas" class="builder-image" decoding="async" loading="lazy" src="./assets/images/4b5665a3e61b41f5806539698a0e5986.png" style="object-fit: contain; object-position: center; position: absolute; height: 100%; width: 100%; top: 0; left: 0;" />
-                    </picture>
-                    <div class="builder-image-sizer css-61adt2"> </div>
+                    <!-- "¿Todavía no estás lista?" Section (Menopause Survival Guide + Palafox Conference) -->
+          <div builder-id="builder-fe7eb59c5a8f44228b95ca4c05b75a15" class="builder-block builder-fe7eb59c5a8f44228b95ca4c05b75a15 todavia-section">
+            <div class="todavia-container">
+              <div class="todavia-grid">
+                <!-- Left Column: Book & Laptop Mockup -->
+                <div class="todavia-media-col">
+                  <div class="todavia-image-wrap">
+                    <img 
+                      src="./assets/images/guia_menopausia_laptop.png" 
+                      alt="Menopause Survival Guide con Conferencia del Científico Palafox" 
+                      class="todavia-mockup-img" 
+                      loading="lazy" 
+                      decoding="async"
+                    />
                   </div>
                 </div>
-                <div builder-id="builder-53da83250d4940149ff7219eee013ea2" class="builder-block builder-53da83250d4940149ff7219eee013ea2 css-yo5fmd">
-                  <div builder-id="builder-c9c9d82301754d86910c726fc0335d70" class="builder-block builder-c9c9d82301754d86910c726fc0335d70 builder-has-component css-t8hvzs"><span class="builder-text css-1qggkls">
-                      <p>¿Todavía no estás lista?</p>
-                    </span></div>
-                  <div builder-id="builder-7b1569ba1cac40e188919e224addfb72" class="builder-block builder-7b1569ba1cac40e188919e224addfb72 builder-has-component css-7u755g"><span class="builder-text css-1qggkls">
-                      <h2>¿Quieres nuestra <span style="background:linear-gradient(100deg,#FF6A5E 0%,#E5342B 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.07em;">Guía de supervivencia para la menopausia?</span></h2>
-                    </span></div>
-                  <div builder-id="builder-38d546b21e8c4b6f85dfc4d4fdf1d192" class="builder-block builder-38d546b21e8c4b6f85dfc4d4fdf1d192 builder-has-component css-2fq1h0"><span class="builder-text css-1qggkls">
-                      <p>Escribe tu correo y la guía se abre de inmediato. ¿Tienes alguna pregunta? Tu consultor puede responderla.</p>
-                    </span></div>
-                  <div builder-id="builder-23d8d461462445839ca43c41887642ac" class="builder-block builder-23d8d461462445839ca43c41887642ac builder-has-component css-s3q4wc">
-                    <div class="builder-custom-code">
-                      <div class="sj-glead sj-gclose">
-                        <form class="sj-gform" data-pdf="https://cdn.builder.io/o/assets%2Ffdb4d79bfbfd478d89398007f8c29424%2Ffc5571e722e0421197e017b04c290126?alt=media&amp;token=204ddd84-f1ef-45dd-8392-c36abac237a5&amp;apiKey=fdb4d79bfbfd478d89398007f8c29424" novalidate="">
-                          <input aria-label="Correo electrónico" autocomplete="email" placeholder="tumejorcorreo@email.com" type="email" />
-                          <button type="submit">Quiero la guía gratis</button>
-                          <input type="hidden" name="pais" id="pais" value="<?php echo to_utf8($geo["geoplugin_countryName"] ?? ''); ?>">
-                          <input type="hidden" name="ciudad" id="ciudad" value="<?php echo to_utf8($geo["geoplugin_city"] ?? ''); ?>">
-                          <input type="hidden" name="estado" id="estado" value="<?php echo to_utf8($geo["geoplugin_regionName"] ?? ''); ?>">
-                          <?php include('../campana_user.php'); ?>
-                          <input type="hidden" name="usuario" id="usuario" value="<?= htmlspecialchars($userIdBySubdomain ?? ''); ?>">
-                          <input type="hidden" name="template" id="template" value="<?= htmlspecialchars($template ?? 195); ?>">
-                          <input type="hidden" name="idioma" id="idioma" value="es">
-                        </form>
-                        <p class="sj-gerr"></p>
-                        <p class="sj-gok" hidden="">Tu guía se está abriendo en una pestaña nueva. <a href="https://cdn.builder.io/o/assets%2Ffdb4d79bfbfd478d89398007f8c29424%2Ffc5571e722e0421197e017b04c290126?alt=media&amp;token=204ddd84-f1ef-45dd-8392-c36abac237a5&amp;apiKey=fdb4d79bfbfd478d89398007f8c29424" rel="noopener" target="_blank">Abrir la guía</a></p>
-                      </div><!-- The submit handler lives in the "Guide form" block of the guide strip (delegated on form.sj-gform). -->
+
+                <!-- Right Column: Content & Lead Capture Form -->
+                <div class="todavia-content-col">
+                  <!-- Top Pill Badge with horizontal glowing line -->
+                  <div class="todavia-badge-wrap">
+                    <div class="todavia-glow-line" aria-hidden="true"></div>
+                    <div class="todavia-badge">
+                      <span>DESCARGA GRATIS</span>
+                      <span class="todavia-badge-dot">·</span>
+                      <span>ACCESO INMEDIATO</span>
+                    </div>
+                  </div>
+
+                  <!-- Headline -->
+                  <h2 class="todavia-heading">
+                    <span class="todavia-heading-white">Tu Guía de Supervivencia</span>
+                    <span class="todavia-heading-pink">para la Menopausia</span>
+                  </h2>
+
+                  <!-- Subtitle -->
+                  <p class="todavia-subtext">
+                    Descubre, en un lenguaje claro y práctico, cómo afrontar esta etapa con más energía, equilibrio hormonal y bienestar integral.
+                  </p>
+
+                  <!-- Bullet Checklist -->
+                  <ul class="todavia-checklist">
+                    <li>
+                      <span class="todavia-chk-icon">
+                        <svg viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.5 6L5.5 10L14.5 1.5" stroke="#FF1E6C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span>¿Estoy en la perimenopausia? Cómo saberlo</span>
+                    </li>
+                    <li>
+                      <span class="todavia-chk-icon">
+                        <svg viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.5 6L5.5 10L14.5 1.5" stroke="#FF1E6C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span>Por qué tienes calor, cansancio y niebla mental</span>
+                    </li>
+                    <li>
+                      <span class="todavia-chk-icon">
+                        <svg viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.5 6L5.5 10L14.5 1.5" stroke="#FF1E6C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span>Qué hacer con la pancita, el peso y la energía</span>
+                    </li>
+                    <li>
+                      <span class="todavia-chk-icon">
+                        <svg viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.5 6L5.5 10L14.5 1.5" stroke="#FF1E6C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                      <span>Sexo y libido: qué cambió y cómo recuperarlo</span>
+                    </li>
+                  </ul>
+
+                  <!-- Exclusive Bonus Box -->
+                  <div class="todavia-bonus-box">
+                    <div class="todavia-bonus-tv">
+                      <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="5" width="40" height="26" rx="4" stroke="#FF2D7A" stroke-width="2.2" fill="rgba(255, 45, 122, 0.06)"/>
+                        <polygon points="19,13 29,18 19,23" fill="#FFFFFF"/>
+                        <path d="M22 31v5M15 36h14" stroke="#FF2D7A" stroke-width="2.2" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <div class="todavia-bonus-divider" aria-hidden="true"></div>
+                    <div class="todavia-bonus-body">
+                      <div class="todavia-bonus-head">
+                        <span class="todavia-bonus-tag">BONO EXCLUSIVO:</span>
+                        <span class="todavia-bonus-title">Conferencia Científica</span>
+                      </div>
+                      <div class="todavia-bonus-speaker">con el Científico Palafox</div>
+                      <p class="todavia-bonus-desc">
+                        Acceso inmediato a su conferencia, donde explica todos los componentes de la formulación y qué hace tan especial este producto para el bienestar de la mujer en esta etapa.
+                      </p>
+                    </div>
+                    <div class="todavia-bonus-flask">
+                      <svg viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 6h10M25 6v9L14 34c-1.8 3.2 0.5 7 4.2 7h17.6c3.7 0 6-3.8 4.2-7L29 15V6" stroke="#FF2D7A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18 31c3-1.8 6.5 0.8 10-0.8s6 0.8 9.5-0.8" stroke="#FF5A9E" stroke-width="1.8" stroke-linecap="round"/>
+                        <circle cx="41" cy="8" r="2.2" fill="#FF5A9E"/>
+                        <circle cx="49" cy="13" r="2.2" fill="#FF5A9E"/>
+                        <circle cx="47" cy="22" r="2.2" fill="#FF5A9E"/>
+                        <circle cx="37" cy="19" r="2.2" fill="#FF5A9E"/>
+                        <line x1="41" y1="8" x2="49" y2="13" stroke="#FF5A9E" stroke-width="1.6"/>
+                        <line x1="49" y1="13" x2="47" y2="22" stroke="#FF5A9E" stroke-width="1.6"/>
+                        <line x1="47" y1="22" x2="37" y2="19" stroke="#FF5A9E" stroke-width="1.6"/>
+                        <line x1="37" y1="19" x2="41" y2="8" stroke="#FF5A9E" stroke-width="1.6"/>
+                        <line x1="33" y1="15" x2="37" y2="19" stroke="#FF5A9E" stroke-width="1.6"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <!-- Form Capture -->
+                  <div class="todavia-form-wrap">
+                    <div class="sj-glead sj-gclose">
+                      <form class="sj-gform todavia-gform" data-pdf="https://cdn.builder.io/o/assets%2Ffdb4d79bfbfd478d89398007f8c29424%2Ffc5571e722e0421197e017b04c290126?alt=media&amp;token=204ddd84-f1ef-45dd-8392-c36abac237a5&amp;apiKey=fdb4d79bfbfd478d89398007f8c29424" novalidate="">
+                        <div class="todavia-inputs-row">
+                          <div class="todavia-input-group">
+                            <span class="todavia-input-icon">
+                              <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                              </svg>
+                            </span>
+                            <input type="text" name="nombre" class="todavia-input" placeholder="Tu nombre" aria-label="Tu nombre" autocomplete="name" />
+                          </div>
+                          <div class="todavia-input-group">
+                            <span class="todavia-input-icon">
+                              <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                              </svg>
+                            </span>
+                            <input type="email" name="email" class="todavia-input" placeholder="Tu email" aria-label="Tu email" autocomplete="email" required />
+                          </div>
+                        </div>
+
+                        <button type="submit" class="todavia-submit-btn">
+                          <span class="todavia-btn-text">Quiero mi guía + conferencia gratis</span>
+                          <span class="todavia-btn-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                              <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                          </span>
+                        </button>
+                        <p class="todavia-subnote">Recibe de <strong>inmediato</strong> tu guía gratuita y el acceso a la conferencia en tu correo.</p>
+
+                        <input type="hidden" name="pais" id="pais" value="<?php echo to_utf8($geo["geoplugin_countryName"] ?? ''); ?>">
+                        <input type="hidden" name="ciudad" id="ciudad" value="<?php echo to_utf8($geo["geoplugin_city"] ?? ''); ?>">
+                        <input type="hidden" name="estado" id="estado" value="<?php echo to_utf8($geo["geoplugin_regionName"] ?? ''); ?>">
+                        <?php include('../campana_user.php'); ?>
+                        <input type="hidden" name="usuario" id="usuario" value="<?= htmlspecialchars($userIdBySubdomain ?? ''); ?>">
+                        <input type="hidden" name="template" id="template" value="<?= htmlspecialchars($template ?? 195); ?>">
+                        <input type="hidden" name="idioma" id="idioma" value="es">
+                      </form>
+                      <p class="sj-gerr" style="display:none;color:#ff6b6b;font-size:14px;margin-top:10px;text-align:center;"></p>
+                      <p class="sj-gok" hidden="" style="color:#ffffff;font-size:15px;margin-top:12px;text-align:center;">
+                        Tu guía se está abriendo en una pestaña nueva. <a href="https://cdn.builder.io/o/assets%2Ffdb4d79bfbfd478d89398007f8c29424%2Ffc5571e722e0421197e017b04c290126?alt=media&amp;token=204ddd84-f1ef-45dd-8392-c36abac237a5&amp;apiKey=fdb4d79bfbfd478d89398007f8c29424" rel="noopener" target="_blank" style="color:#FF2D6C;font-weight:600;text-decoration:underline;">Abrir la guía</a>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1723,9 +1847,6 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
                 <div builder-id="builder-f8039fc9bf44485fa5d2086f017e8411" class="builder-block builder-f8039fc9bf44485fa5d2086f017e8411 builder-has-component css-19vd7vx"><span class="builder-text css-1qggkls">
                     <p><sup>‡</sup>Resultados autorreportados del resumen de una experiencia de producto de treinta días. Los resultados individuales varían.</p>
                   </span></div>
-                <div builder-id="builder-0a60b5da45ca4f2287e6c03625ee37c5" class="builder-block builder-0a60b5da45ca4f2287e6c03625ee37c5 builder-has-component css-5c28k8"><span class="builder-text css-1qggkls">
-                    <p>© Immunotec. Todos los derechos reservados.</p>
-                  </span></div>
               </div>
             </div>
           </div>
@@ -1733,7 +1854,7 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
       </div>
     </div>
   </main>
-  <script src="script.js?v=1.0.5"></script>
+  <script src="script.js?v=1.0.6"></script>
 
   <script>
     window.addEventListener('DOMContentLoaded', function() {
