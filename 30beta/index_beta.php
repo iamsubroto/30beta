@@ -1520,7 +1520,7 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
                   <div builder-id="builder-0ad2aa3c4cff42e3a2d506d63a8c2b54" class="builder-block builder-0ad2aa3c4cff42e3a2d506d63a8c2b54 builder-has-component css-xhsoh1"><span class="builder-text css-1qggkls">
                       <p>4 She+, 2 SunRay, 2 Immunocal Platinum, Booster Rojos y Verdes y vasos mezcladores. Más volumen para subir de rango más rápido.</p>
                     </span></div>
-                </div><a builder-id="builder-ce45be28c0fd495b9410273b4fde21df" class="builder-block builder-ce45be28c0fd495b9410273b4fde21df builder-has-component css-1vr9e6" href="#pack-0009702" role="button">Inicia fuerte</a>
+                </div><a builder-id="builder-ce45be28c0fd495b9410273b4fde21df" class="builder-block builder-ce45be28c0fd495b9410273b4fde21df builder-has-component css-1vr9e6" href="<?= $pagina_corporativa?>" role="button">Inicia fuerte</a>
               </div>
               <div builder-id="builder-9827a13b3c6341b0bba693382fa05d0b" class="builder-block builder-9827a13b3c6341b0bba693382fa05d0b builder-has-component css-lswe11"><span class="builder-text css-1qggkls">
                   <p>Verás un precio más bajo en la primera pantalla del checkout. El envío y tu kit de bienvenida se agregan ahí, y el total llega al precio de arriba.</p>
@@ -1771,7 +1771,7 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
                   <!-- Form Capture -->
                   <div class="todavia-form-wrap">
                     <div class="sj-glead sj-gclose">
-                      <form class="sj-gform todavia-gform" data-pdf="https://cdn.builder.io/o/assets%2Ffdb4d79bfbfd478d89398007f8c29424%2Ffc5571e722e0421197e017b04c290126?alt=media&amp;token=204ddd84-f1ef-45dd-8392-c36abac237a5&amp;apiKey=fdb4d79bfbfd478d89398007f8c29424" novalidate="">
+                      <form action="../../registro_prospecto_subdominio_autoresponder.php" method="post" class="cf op-optin-validation sj-gform todavia-gform" id="myForm" data-pdf="https://cdn.builder.io/o/assets%2Ffdb4d79bfbfd478d89398007f8c29424%2Ffc5571e722e0421197e017b04c290126?alt=media&amp;token=204ddd84-f1ef-45dd-8392-c36abac237a5&amp;apiKey=fdb4d79bfbfd478d89398007f8c29424">
                         <div class="todavia-inputs-row">
                           <div class="todavia-input-group">
                             <span class="todavia-input-icon">
@@ -1779,7 +1779,7 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
                                 <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
                               </svg>
                             </span>
-                            <input type="text" name="nombre" class="todavia-input" placeholder="Tu nombre" aria-label="Tu nombre" autocomplete="name" />
+                            <input type="text" name="nombre" class="todavia-input" id="name" placeholder="Tu nombre" aria-label="Tu nombre" autocomplete="name" required="" />
                           </div>
                           <div class="todavia-input-group">
                             <span class="todavia-input-icon">
@@ -1788,7 +1788,7 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
                                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                               </svg>
                             </span>
-                            <input type="email" name="email" class="todavia-input" placeholder="Tu email" aria-label="Tu email" autocomplete="email" required />
+                            <input type="email" name="email" class="todavia-input" id="e-mail" placeholder="Tu email" aria-label="Tu email" autocomplete="email" required="" />
                           </div>
                         </div>
 
@@ -1854,7 +1854,7 @@ $video = !empty($video) ? $video : 'https://vioniko.s3.us-west-2.amazonaws.com/v
       </div>
     </div>
   </main>
-  <script src="script.js?v=1.0.6"></script>
+  <script src="script.js?v=1.0.8"></script>
 
   <script>
     window.addEventListener('DOMContentLoaded', function() {
